@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nordlicht Immobilien</title>
+    <meta
+      name="description"
+      content="Eine Beispiel-Website, entwickelt von Christina: Nordlicht Immobilien - Ihr Partner für Immobilien in Norddeutschland. Wir bieten umfassende Dienstleistungen rund um den Kauf, Verkauf und die Vermietung von Immobilien."
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo_small.PNG"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./shared/header_footer.css" />
+  </head>
+  <body>
+    <header class="header-placeholder"></header>
+    <main>
+      <section id="head">
+        <div class="hero-container">
+          <h1>Ihr Immobilienpartner im Norden</h1>
+          <span>Ihr neues Zuhause wartet schon auf Sie.</span>
+          <button class="hero-small">Angebote entdecken</button>
+          <div class="hero-btn">
+            <div class="hero-input">
+              <label for="mieten-kaufen">Sie Möchten</label>
+              <select
+                name="mieten-kaufen"
+                id="mieten-kaufen"
+                aria-label="Möchten Sie mieten oder kaufen?"
+              >
+                <option value="mieten">Mieten</option>
+                <option value="kaufen">Kaufen</option>
+              </select>
+            </div>
+            <div class="hero-input border-left-right">
+              <label for="type">Sie Suchen</label>
+              <select name="type" id="type" aria-label="Was suchen Sie?">
+                <option value="wohnung">Wohnung</option>
+                <option value="haus">Haus</option>
+              </select>
+            </div>
+            <div class="hero-input">
+              <label for="ort">Ort</label>
+              <input type="text" id="ort" />
+            </div>
+            <div class="hero-input">
+              <button class="search" type="submit">Suchen</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="unsere_immobilien">
+        <h2>Immobilienangebote</h2>
+        <div class="immo-container scroller">
+          <div class="inner-immo-con inner-scroler">
+            <div class="immo-angebot">
+              <div id="haus1" class="haus-img"></div>
+              <div class="haus info">
+                <h3>Schönes Einfamilienhaus</h3>
+                <p>Ort: Hamburg</p>
+                <p>Preis: 450.000 €</p>
+                <button class="btn">Mehr erfahren</button>
+              </div>
+            </div>
+            <div class="immo-angebot">
+              <div id="haus2" class="haus-img"></div>
+              <div class="haus info">
+                <h3>Schönes Einfamilienhaus</h3>
+                <p>Ort: Hamburg</p>
+                <p>Preis: 450.000 €</p>
+                <button class="btn">Mehr erfahren</button>
+              </div>
+            </div>
+            <div class="immo-angebot">
+              <div id="haus3" class="haus-img"></div>
+              <div class="haus info">
+                <h3>Schönes Einfamilienhaus</h3>
+                <p>Ort: Hamburg</p>
+                <p>Preis: 450.000 €</p>
+                <button class="btn">Mehr erfahren</button>
+              </div>
+            </div>
+            <div class="immo-angebot">
+              <div id="haus4" class="haus-img"></div>
+              <div class="haus info">
+                <h3>Schönes Einfamilienhaus</h3>
+                <p>Ort: Hamburg</p>
+                <p>Preis: 450.000 €</p>
+                <button class="btn">Mehr erfahren</button>
+              </div>
+            </div>
+            <div class="immo-angebot">
+              <div id="haus5" class="haus-img"></div>
+              <div class="haus info">
+                <h3>Schönes Einfamilienhaus</h3>
+                <p>Ort: Hamburg</p>
+                <p>Preis: 450.000 €</p>
+                <button class="btn">Mehr erfahren</button>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+      <section id="service">
+        <h2>Unsere Services für Sie</h2>
+        <div class="service-container">
+          <figure class="service-item">
+            <img
+              src="./assets/img/immobilienberatung.jpg"
+              alt="Immobilienberatung"
+            />
+            <figcaption>
+              <h3>Immobilienberatung</h3>
+              <p>
+                Wir bieten Ihnen eine umfassende Beratung rund um Ihre Immobilie.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="service-item">
+            <img
+              src="./assets/img/wert-r.jpg"
+              alt="Wertermittlung von Immobilien"
+            />
+            <figcaption>
+              <h3>Wertermittlung</h3>
+              <p>
+                Lassen Sie den Wert Ihrer Immobilie von unseren Experten
+                ermitteln.
+              </p>
+          </figure>
+          <figure class="service-item">
+            <img
+              src="./assets/img/team.jpg"
+              alt="Unser Team"
+            />
+            <figcaption>
+              <h3>Unsere Makler</h3>
+              <p>
+                Unsere erfahrenen Makler unterstützen Sie beim Verkauf Ihrer
+                Immobilie.
+            </figcaption>
+          </figure>
+          <figure class="service-item">
+            <img
+              src="./assets/img/job.jpg"
+              alt="Werde Makler"
+            />
+            <figcaption>
+              <h3>Werde Makler</h3>
+              <p>
+                Interessiert an einer Karriere in der Immobilienbranche? Wir
+                suchen ständig neue Talente.
+              </p>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-placeholder"></footer>
+    <script src="./shared/header_footer.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
