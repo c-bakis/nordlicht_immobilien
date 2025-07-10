@@ -1,19 +1,36 @@
 
-//submit contact form
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("contactForm");
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the default form submission
+function handleSubmit(event) {
+    event.preventDefault();
+    const customerName = document.getElementById("name");
+    const cusName = document.getElementById("cusName");
+    cusName.innerText = customerName.value;  // Set the customer's name in the success message
+    // Get Name for Success Message
 
-        // Collect form data
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
+    const status = document.getElementById("my-form-status");
+    const form = document.getElementById("contact-form");
+    const formData = new FormData(event.target);
 
-        // Log the data to the console (or send it to a server)
-        console.log("Form submitted:", data);
-
-        // Optionally, show a success message or reset the form
-        alert("Vielen Dank für Ihre Nachricht! Wir werden uns so schnell wie möglich bei Ihnen melden.");
-        form.reset();
+    fetch("https://formspree.io/f/mqabrkye", {
+      method: "POST",
+      body: new FormData(event.target),
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(() => {
+        // Show success message
+        status.classList.remove("hide");
+        status.classList.add("success-msg");
+        form.reset()
+  }).catch((error) => {
+        console.log(error);
     });
-});
+}
+  
+let hideSuccessMessage = () => {
+    const status = document.getElementById("my-form-status");
+    status.classList.add("hide");
+    status.classList.remove("success-msg");
+    const cusName = document.getElementById("cusName");
+    cusName.innerText = "";  // Clear the customer's name in the success message
+};
+document.addEventListener('click', hideSuccessMessage);

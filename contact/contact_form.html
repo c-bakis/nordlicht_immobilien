@@ -6,15 +6,49 @@
     <title>Kontakt</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../shared/header_footer.css">
-    <link rel="stylesheet" href="../assets/contact.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
     <link rel="shortcut icon" href="../assets/img/logo_small.PNG" type="image/png">
 </head>
 <body>
     <header class="header-placeholder"></header>
     <main>
-    <h1>Kontaktieren Sie uns:</h1>
-
-
+    <h1 class="not-index">Kontaktieren Sie uns:</h1>
+    <form onsubmit="handleSubmit(event)" id="contact-form">
+        <div class="form-group">
+            <label for="name">Name / Vorname / Firma *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="next-to-each-other">
+            <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" ></div>
+            <div class="form-group">
+            <label for="phone">Telefon/Mobil *</label>
+            <input type="tel" id="phone" name="phone" requiered></div>
+        </div>
+        <div class="form-group">
+            <label for="message">Ihre Nachricht *</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="privacy-policy">
+                <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                Ich habe die <a href="../privacy_agb/datenschutz.html" target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen.
+            </label>
+            <p class="info">Felder mit einem * sind Pflichtfelder uns müssen ausgefüllt werden.</p>
+        <div class="form-group">
+            <button type="submit">Absenden</button>
+        </div>
+    </form>
+    <div class="hide" id="my-form-status">
+        <p>Sehr geehrte Frau/geehrter Herr/Firma 
+                                    <span id="cusName"></span>
+                                </p>
+                                <p>Danke für ihre Nachricht.</p>
+                                <p>Wir werden uns schnellstmöglich bei Ihnen melden</p>
+                                <p>Ihr Nordlicht Immobilien Team</p>
+                                <a href="../index.html" class="button">Zurück zur Startseite</a>
+    </div>
     </main>
     <footer class="footer-placeholder"></footer>
     <script src="../shared/header_footer.js"></script>
