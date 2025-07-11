@@ -14,6 +14,7 @@ function addAnimation() {
         scrollerContent.forEach((item) => {
             const clone = item.cloneNode(true);
             clone.setAttribute("aria-hidden", "true");
+            clone.classList.add("clone");
             scrollerInner.appendChild(clone);
             console.log(item);
         });

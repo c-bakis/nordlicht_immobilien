@@ -201,6 +201,11 @@ section#head {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+}
+.inner-scroler .haus.info > h3 {
+    height: 60px;
+    font-size: 1.25rem;
 }
 .scroller[data-animated="true"] {
     max-width: 1440px;
@@ -271,9 +276,46 @@ section#service > h2 {
 }
 .service-item:hover img {
     transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out
 }
 
+.hide {
+    display: none;
+}
+
+/* Media Query for Print */
+@media print {
+    section {
+        height: fit-content;
+        background-image: none;
+        padding: 0 60px;
+    }
+    section#head {
+        background-image: none;
+        height: 320px !important;
+    }
+    .clone {
+        display: none;
+    }
+    .scroller[data-animated="true"] .inner-scroler {
+        animation: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+}
+    .scroller[data-animated="true"] {
+        overflow: visible;
+        -webkit-mask: none;
+        mask: none;
+    }
+    img.hide {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 @media screen and (max-width: 1669px) {
     .immo-container > div.inner-immo-con {
         grid-template-columns: repeat(3, 1fr);
@@ -326,16 +368,23 @@ section#service > h2 {
         font-size: 2rem;
         margin-bottom: 20px;
     }
+    .inner-scroler .haus.info > h3 {
+    height: 90px;
+}
+    section#service > h2 {
+        padding: 5px 10px;
+        text-align: left;
+    }
     .immo-container > div.inner-immo-con {
         grid-template-columns: repeat(1, 1fr);
     }
     .immo-angebot {
-        width: 100%;
+        width: 200px;
         height: 450px;
     }
     .scroller[data-animated="true"] {
         max-width: 100%;
-        overflow: hidden;
+        overflow: visible;
         -webkit-mask: none;
         mask: none;
     }
@@ -350,10 +399,11 @@ section#service > h2 {
         background-position: 50% 100%;
         height: 60vh;
         width: 100%;
+        display: flex;
+        align-items: center;
     }
     .hero-container {
         height: fit-content;
-        margin: 15% 0 0 0;
         padding: 20px;
         gap: 50px;
         background-color: var(--background-transparent);

@@ -138,6 +138,11 @@ a.socials > img {
     margin-left: 5px;
     vertical-align: middle;
 }
+@media print {
+    .nav_links, footer {
+        display: none;
+    }
+}
 /* Responsive Design */
 @media (max-width: 837px) {
     header {  
